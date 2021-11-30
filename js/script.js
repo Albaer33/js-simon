@@ -25,9 +25,15 @@ setTimeout(function() {
 
     // confronto gli userNumber con i randomNumber e mostro il risultato
     compareNumbers();
-    alert('i numeri indovinati sono: ' + rightNumber);
 
-}, 10000);
+    // se l'array di numeri indovinati è vuoto esce un alert altrimenti mostra i numeri 
+    if(!rightNumber.length) {
+        alert('non hai indovinato nessun numero, sei scarso.');
+    }
+    else {
+        alert('i numeri indovinati sono: ' + rightNumber);
+    }
+}, 30000);
 
 // FUNCTION
 function getRndInteger(min, max) {
